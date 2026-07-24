@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import slide1 from "@/assets/hero-slide-1.jpg";
 import slide2 from "@/assets/hero-slide-2.jpg";
@@ -8,7 +8,7 @@ export type HeroSlide = {
   image: string;
   alt: string;
   kicker: string;
-  title: React.ReactNode;
+  title: ReactNode;
   subtitle: string;
 };
 
