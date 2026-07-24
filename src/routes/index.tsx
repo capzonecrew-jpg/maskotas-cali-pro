@@ -360,6 +360,10 @@ function Home() {
             <h2 className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl md:text-5xl">
               Familias que ya confían en nosotros
             </h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Estas reseñas son ejemplos ilustrativos. Muy pronto incluiremos
+              testimonios reales de nuestros clientes.
+            </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
