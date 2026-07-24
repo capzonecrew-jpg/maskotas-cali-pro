@@ -180,7 +180,7 @@ function Home() {
 
       {/* STATS BAR */}
       <section className="border-b border-border bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 md:grid-cols-4 md:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 md:grid-cols-3 md:px-8">
           {STATS.map(({ icon: Icon, value, label }, i) => (
             <Reveal key={label} delay={i * 80} className="flex items-center gap-3">
               <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-secondary text-brand">
