@@ -142,10 +142,6 @@ function Home() {
 
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/70">
               <div className="flex items-center gap-1.5">
-                <Star className="h-4 w-4 fill-gold text-gold" />
-                <span>4.9 · 300+ reseñas</span>
-              </div>
-              <div className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4 text-gold" />
                 <span>Quintas de Don Simón, Cali</span>
               </div>
