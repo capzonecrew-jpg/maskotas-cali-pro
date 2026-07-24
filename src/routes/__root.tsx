@@ -123,6 +123,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: SITE.name },
       { property: "og:locale", content: "es_CO" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Veterinaria en Cali | Clínica Especializada Maskotas — Urgencias, Cirugías y Spa" },
+      { property: "og:title", content: "Veterinaria en Cali | Clínica Especializada Maskotas — Urgencias, Cirugías y Spa" },
+      { name: "twitter:title", content: "Veterinaria en Cali | Clínica Especializada Maskotas — Urgencias, Cirugías y Spa" },
+      { name: "description", content: "Clínica veterinaria especializada en Cali, barrio Quintas de Don Simón. Consulta, cirugías, laboratorio, ecografía, urgencias, peluquería canina y domicilios. Agenda por WhatsApp." },
+      { property: "og:description", content: "Clínica veterinaria especializada en Cali, barrio Quintas de Don Simón. Consulta, cirugías, laboratorio, ecografía, urgencias, peluquería canina y domicilios. Agenda por WhatsApp." },
+      { name: "twitter:description", content: "Clínica veterinaria especializada en Cali, barrio Quintas de Don Simón. Consulta, cirugías, laboratorio, ecografía, urgencias, peluquería canina y domicilios. Agenda por WhatsApp." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2834691c-cd46-404d-a708-0c8242754972/id-preview-5e077bbc--c9ebf7bb-dce1-4c28-8ea5-6c7736de05a9.lovable.app-1784902044274.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2834691c-cd46-404d-a708-0c8242754972/id-preview-5e077bbc--c9ebf7bb-dce1-4c28-8ea5-6c7736de05a9.lovable.app-1784902044274.png" },
     ],
     links: [
       {

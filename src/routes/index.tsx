@@ -41,12 +41,12 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Clínica Veterinaria Especializada Maskotas — Cali",
+        content: "Veterinaria en Cali | Clínica Especializada Maskotas — Urgencias, Cirugías y Spa",
       },
       {
         property: "og:description",
         content:
-          "Cuidado veterinario avanzado y cercano en Cali. Cirugías especializadas, urgencias, laboratorio propio, spa y domicilios.",
+          "Clínica veterinaria especializada en Cali, barrio Quintas de Don Simón. Consulta, cirugías, laboratorio, ecografía, urgencias, peluquería canina y domicilios. Agenda por WhatsApp.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
