@@ -15,7 +15,6 @@ import {
   MessageCircle,
   Star,
   Sparkles,
-  Award,
   Users,
   ArrowRight,
 } from "lucide-react";
@@ -75,27 +74,26 @@ const REASONS = [
 ];
 
 const STATS = [
-  { icon: Award, value: "+15", label: "años de experiencia" },
   { icon: Users, value: "+8.000", label: "mascotas atendidas" },
-  { icon: HeartPulse, value: "24/7", label: "urgencias coordinadas" },
+  { icon: Clock, value: "Lun-Sáb", label: "urgencias en horario de atención" },
   { icon: ShieldCheck, value: "100%", label: "equipo veterinario titulado" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Laura M.",
-    pet: "dueña de Rocco",
-    text: "Le salvaron la vida a Rocco después de una cirugía complicada. Atención humana y muy profesional.",
+    name: "Ejemplo 1",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: una vez que recibamos reseñas reales de nuestros clientes, lo reemplazaremos por su experiencia auténtica.",
   },
   {
-    name: "Andrés P.",
-    pet: "dueño de Luna",
-    text: "El equipo es increíble. Explican todo con paciencia y los precios son justos. 100% recomendados.",
+    name: "Ejemplo 2",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: esta casilla está reservada para una reseña verificada de una familia que haya confiado en nosotros.",
   },
   {
-    name: "Camila R.",
-    pet: "dueña de Toby",
-    text: "Llevo a Toby al spa cada mes. Sale feliz y hermoso. La clínica es impecable.",
+    name: "Ejemplo 3",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: pronto compartiremos aquí testimonios reales de dueños de mascotas atendidas en Maskotas.",
   },
 ];
 
@@ -143,10 +141,6 @@ function Home() {
 
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/70">
               <div className="flex items-center gap-1.5">
-                <Star className="h-4 w-4 fill-gold text-gold" />
-                <span>4.9 · 300+ reseñas</span>
-              </div>
-              <div className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4 text-gold" />
                 <span>Quintas de Don Simón, Cali</span>
               </div>
@@ -185,7 +179,7 @@ function Home() {
 
       {/* STATS BAR */}
       <section className="border-b border-border bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 md:grid-cols-4 md:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-10 md:grid-cols-3 md:px-8">
           {STATS.map(({ icon: Icon, value, label }, i) => (
             <Reveal key={label} delay={i * 80} className="flex items-center gap-3">
               <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-secondary text-brand">
@@ -365,6 +359,10 @@ function Home() {
             <h2 className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl md:text-5xl">
               Familias que ya confían en nosotros
             </h2>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Estas reseñas son ejemplos ilustrativos. Muy pronto incluiremos
+              testimonios reales de nuestros clientes.
+            </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
