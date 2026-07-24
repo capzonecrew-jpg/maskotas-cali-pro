@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import slide1 from "@/assets/hero-slide-1.jpg";
 import slide2 from "@/assets/hero-slide-2.jpg";
@@ -8,6 +8,7 @@ export type HeroSlide = {
   image: string;
   alt: string;
   kicker: string;
+  title: ReactNode;
   subtitle: string;
 };
 
@@ -16,22 +17,37 @@ export const HERO_SLIDES: HeroSlide[] = [
     image: slide1,
     alt: "Veterinaria examinando a un cachorro durante una consulta",
     kicker: "Atención médica",
+    title: (
+      <>
+        Cuidado veterinario <span className="text-gradient-gold">especializado</span> en Cali
+      </>
+    ),
     subtitle:
-      "Consulta cercana y humana con médicos veterinarios que escuchan, explican y acompañan a cada mascota.",
+      "Consulta, vacunación y seguimiento con la calidez de una familia.",
   },
   {
     image: slide2,
     alt: "Quirófano veterinario con equipos de diagnóstico avanzado",
     kicker: "Tecnología",
+    title: (
+      <>
+        Tecnología de <span className="text-gradient-gold">hospital</span> para tu mascota
+      </>
+    ),
     subtitle:
-      "Laboratorio propio, ecografía y quirófano equipado para cirugías especializadas con precisión médica.",
+      "Laboratorio propio, ecografía y cirugías avanzadas en un solo lugar.",
   },
   {
     image: slide3,
     alt: "Perro pequeño feliz siendo peluqueado en el spa",
     kicker: "Peluquería y spa",
+    title: (
+      <>
+        Peluquería y <span className="text-gradient-gold">spa</span> que consienten a tu mascota
+      </>
+    ),
     subtitle:
-      "Baño, corte y estética con productos hipoalergénicos para el bienestar y felicidad de tu mascota.",
+      "Baño, corte y estética con productos hipoalergénicos.",
   },
 ];
 

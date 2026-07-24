@@ -117,10 +117,21 @@ function Home() {
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
               {active.kicker}
             </div>
-            <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-              Cuidado veterinario{" "}
-              <span className="text-gradient-gold">especializado</span> en Cali
-            </h1>
+            {slideIdx === 0 ? (
+              <h1
+                key={`title-${slideIdx}`}
+                className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up"
+              >
+                {HERO_SLIDES[0].title}
+              </h1>
+            ) : (
+              <h2
+                key={`title-${slideIdx}`}
+                className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl animate-fade-up"
+              >
+                {active.title}
+              </h2>
+            )}
             <p
               key={`sub-${slideIdx}`}
               className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg animate-fade-up"
