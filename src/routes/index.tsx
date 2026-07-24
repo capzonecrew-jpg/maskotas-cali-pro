@@ -75,27 +75,26 @@ const REASONS = [
 ];
 
 const STATS = [
-  { icon: Award, value: "+15", label: "años de experiencia" },
   { icon: Users, value: "+8.000", label: "mascotas atendidas" },
-  { icon: HeartPulse, value: "24/7", label: "urgencias coordinadas" },
+  { icon: Clock, value: "Lun-Sáb", label: "urgencias en horario de atención" },
   { icon: ShieldCheck, value: "100%", label: "equipo veterinario titulado" },
 ];
 
 const TESTIMONIALS = [
   {
-    name: "Laura M.",
-    pet: "dueña de Rocco",
-    text: "Le salvaron la vida a Rocco después de una cirugía complicada. Atención humana y muy profesional.",
+    name: "Ejemplo 1",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: una vez que recibamos reseñas reales de nuestros clientes, lo reemplazaremos por su experiencia auténtica.",
   },
   {
-    name: "Andrés P.",
-    pet: "dueño de Luna",
-    text: "El equipo es increíble. Explican todo con paciencia y los precios son justos. 100% recomendados.",
+    name: "Ejemplo 2",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: esta casilla está reservada para una reseña verificada de una familia que haya confiado en nosotros.",
   },
   {
-    name: "Camila R.",
-    pet: "dueña de Toby",
-    text: "Llevo a Toby al spa cada mes. Sale feliz y hermoso. La clínica es impecable.",
+    name: "Ejemplo 3",
+    pet: "reseña placeholder",
+    text: "Texto de ejemplo: pronto compartiremos aquí testimonios reales de dueños de mascotas atendidas en Maskotas.",
   },
 ];
 
