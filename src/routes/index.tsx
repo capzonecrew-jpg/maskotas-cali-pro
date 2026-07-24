@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import {
   Stethoscope,
   Syringe,
@@ -18,13 +19,13 @@ import {
   Users,
   ArrowRight,
 } from "lucide-react";
-import heroVet from "@/assets/hero-vet.jpg";
 import caseBefore from "@/assets/case-before.jpg";
 import caseAfter from "@/assets/case-after.jpg";
 import spaImg from "@/assets/spa.jpg";
 import { SITE, waLink, telLink, formatPhone } from "@/lib/site";
 import { PawsBackdrop } from "@/components/PawsBackdrop";
 import { Reveal } from "@/components/Reveal";
+import { HeroCarousel, HERO_SLIDES } from "@/components/HeroCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -98,6 +99,8 @@ const TESTIMONIALS = [
 ];
 
 function Home() {
+  const [slideIdx, setSlideIdx] = useState(0);
+  const active = HERO_SLIDES[slideIdx];
   return (
     <>
       {/* HERO */}
@@ -107,17 +110,22 @@ function Home() {
         <PawsBackdrop />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white/90 backdrop-blur-sm">
+            <div
+              key={`kicker-${slideIdx}`}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white/90 backdrop-blur-sm animate-fade-up"
+            >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
-              {SITE.tagline}
+              {active.kicker}
             </div>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
               Cuidado veterinario{" "}
               <span className="text-gradient-gold">especializado</span> en Cali
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-              Clínica con laboratorio propio, cirugías avanzadas, urgencias y peluquería.
-              Atendemos a tu mascota con la tecnología de un hospital y la calidez de una familia.
+            <p
+              key={`sub-${slideIdx}`}
+              className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg animate-fade-up"
+            >
+              {active.subtitle}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -151,29 +159,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="relative animate-fade-up" style={{ animationDelay: "150ms" }}>
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-gold/30 via-transparent to-white/10 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/20 shadow-2xl">
-              <img
-                src={heroVet}
-                alt="Médico veterinario examinando un cachorro golden retriever en la Clínica Maskotas de Cali"
-                width={1600}
-                height={1200}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-white/10 bg-brand-dark/80 p-4 shadow-xl backdrop-blur sm:block">
-              <div className="flex items-center gap-3">
-                <div className="grid h-11 w-11 place-items-center rounded-full bg-gold text-brand-dark">
-                  <HeartPulse className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-white/60">Urgencias</div>
-                  <div className="font-semibold text-white">Atención inmediata</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <HeroCarousel index={slideIdx} onChange={setSlideIdx} />
         </div>
       </section>
 
