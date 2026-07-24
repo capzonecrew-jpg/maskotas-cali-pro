@@ -15,7 +15,6 @@ import {
   MessageCircle,
   Star,
   Sparkles,
-  Award,
   Users,
   ArrowRight,
 } from "lucide-react";
