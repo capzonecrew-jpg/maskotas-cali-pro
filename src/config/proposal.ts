@@ -21,7 +21,7 @@ export const PROPOSAL = {
   preparedFor: "Clínica Veterinaria Especializada Maskotas",
   date: "Julio de 2026",
   // Link al demo en vivo (para el botón "Ver el demo")
-  demoUrl: "https://maskotas-cali-pro.lovable.app",
+  demoUrl: "https://maskotas-cali-pro.vercel.app",
 
   intro:
     "Su clínica, abierta las 24 horas en internet. Convierta a sus seguidores de Instagram en clientes que agendan directo por WhatsApp — con una imagen profesional a la altura de su atención veterinaria.",
