@@ -19,6 +19,8 @@ import { SITE } from "../lib/site";
 import { EditProvider } from "../lib/editing";
 import { PromoProvider } from "../lib/promos";
 import { EditBar } from "../components/EditBar";
+import { CartProvider } from "../lib/cart";
+import { CartWidget } from "../components/CartWidget";
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
@@ -192,16 +194,19 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <EditProvider>
         <PromoProvider>
-          <div className="flex min-h-screen flex-col">
-            {!bare && <Header />}
-            <main className="flex-1">
-              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-              <Outlet />
-            </main>
-            {!bare && <Footer />}
-            {!bare && <WhatsAppFloat />}
-          </div>
-          <EditBar />
+          <CartProvider>
+            <div className="flex min-h-screen flex-col">
+              {!bare && <Header />}
+              <main className="flex-1">
+                {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+                <Outlet />
+              </main>
+              {!bare && <Footer />}
+              {!bare && <WhatsAppFloat />}
+            </div>
+            {!bare && <CartWidget />}
+            <EditBar />
+          </CartProvider>
         </PromoProvider>
       </EditProvider>
     </QueryClientProvider>

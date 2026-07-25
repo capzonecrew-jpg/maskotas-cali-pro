@@ -4,6 +4,7 @@ import { waLink } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
 import { EditableText, EditableImage, useEdit, useEditableList } from "@/lib/editing";
+import { useCart } from "@/lib/cart";
 import { PRODUCT_CATEGORIES, productId } from "@/lib/catalog";
 import { usePromos } from "@/lib/promos";
 import { PromoRibbon } from "@/components/PromoTag";
@@ -31,6 +32,7 @@ type AddedProd = { id: string; ci: number };
 
 function PetShop() {
   const { getPromoFor } = usePromos();
+  const { add } = useCart();
   const { editing } = useEdit();
   const { items: added, setItems: setAdded } = useEditableList<AddedProd>("ps-added");
   const { items: deleted, setItems: setDeleted } = useEditableList<string>("ps-deleted");
@@ -173,15 +175,13 @@ function PetShop() {
                             <EditableText id={`${id}-price`} className="text-sm font-bold text-brand">
                               {p.price}
                             </EditableText>
-                            <a
-                              href={waLink(`Hola, quiero pedir: ${p.name}`)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1.5 text-xs font-semibold text-brand transition-colors hover:bg-gold hover:text-brand-dark"
+                            <button
+                              onClick={() => add({ id, name: p.name, price: p.price })}
+                              className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-gold hover:text-brand-dark"
                             >
-                              <MessageCircle className="h-3.5 w-3.5" />
-                              Pedir
-                            </a>
+                              <Plus className="h-3.5 w-3.5" />
+                              Agregar
+                            </button>
                           </div>
                         </div>
                       </div>
