@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SITE, telLink, waLink } from "@/lib/site";
+import logo from "@/assets/logo-maskotas.jpeg";
 
 const NAV = [
   { to: "/", label: "Inicio" },
@@ -11,18 +12,6 @@ const NAV = [
   { to: "/blog", label: "Blog" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
-
-function PawLogo({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <ellipse cx="7" cy="8" rx="1.8" ry="2.4" />
-      <ellipse cx="12" cy="6" rx="1.8" ry="2.6" />
-      <ellipse cx="17" cy="8" rx="1.8" ry="2.4" />
-      <ellipse cx="4.5" cy="13" rx="1.5" ry="2" />
-      <path d="M12 12c-3.2 0-5.5 2.4-5.5 5 0 2.2 2 3 5.5 3s5.5-.8 5.5-3c0-2.6-2.3-5-5.5-5z" />
-    </svg>
-  );
-}
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -45,9 +34,13 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-xl gradient-brand text-white shadow-md">
-            <PawLogo className="h-5 w-5" />
-          </span>
+          <img
+            src={logo}
+            alt="Logo Clínica Veterinaria Maskotas"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full object-cover shadow-md ring-2 ring-gold/60"
+          />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-lg font-bold text-brand">Maskotas</span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">

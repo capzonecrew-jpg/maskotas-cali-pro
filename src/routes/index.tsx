@@ -19,13 +19,13 @@ import {
   Users,
   ArrowRight,
 } from "lucide-react";
-import caseBefore from "@/assets/case-before.jpg";
-import caseAfter from "@/assets/case-after.jpg";
-import spaImg from "@/assets/spa.jpg";
+import whyImg from "@/assets/real-vet-cat.jpg";
 import { SITE, waLink, telLink, formatPhone } from "@/lib/site";
 import { PawsBackdrop } from "@/components/PawsBackdrop";
 import { Reveal } from "@/components/Reveal";
 import { HeroCarousel, HERO_SLIDES } from "@/components/HeroCarousel";
+import { Promotions } from "@/components/Promotions";
+import { EditableText, EditableImage } from "@/lib/editing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -191,6 +191,9 @@ function Home() {
         </div>
       </section>
 
+      {/* PROMOCIONES (dinámicas desde el panel /admin) */}
+      <Promotions />
+
       {/* SERVICES */}
       <section id="servicios" className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
@@ -220,91 +223,6 @@ function Home() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
-      <section className="relative overflow-hidden bg-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <div className="text-xs font-semibold uppercase tracking-widest text-brand">
-              Casos de éxito
-            </div>
-            <h2 className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl md:text-5xl">
-              Historias que nos enorgullecen
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground">
-              Cirugías especializadas y recuperaciones que devuelven la sonrisa a las familias.
-            </p>
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            <Reveal>
-              <div className="card-lift overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
-                <div className="grid grid-cols-2 gap-0.5 bg-border">
-                  <figure className="img-hover-zoom relative">
-                    <img
-                      src={caseBefore}
-                      alt="Perro antes de tratamiento veterinario en Clínica Maskotas Cali"
-                      loading="lazy"
-                      className="aspect-[4/3] w-full object-cover"
-                    />
-                    <figcaption className="absolute left-3 top-3 rounded-full bg-brand-dark/85 px-3 py-1 text-xs font-medium text-white">
-                      Antes
-                    </figcaption>
-                  </figure>
-                  <figure className="img-hover-zoom relative">
-                    <img
-                      src={caseAfter}
-                      alt="Perro feliz después de cirugía especializada en Clínica Maskotas Cali"
-                      loading="lazy"
-                      className="aspect-[4/3] w-full object-cover"
-                    />
-                    <figcaption className="absolute left-3 top-3 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-brand-dark">
-                      Después
-                    </figcaption>
-                  </figure>
-                </div>
-                <div className="p-6">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-brand">
-                    Cirugía · Rinoplastia canina
-                  </div>
-                  <h3 className="mt-2 font-display text-2xl font-bold text-brand-dark">
-                    Rocco vuelve a respirar bien
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Cirugía especializada de vías respiratorias con recuperación completa en 3
-                    semanas. Un procedimiento que solo pocas clínicas en la región realizan.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={120}>
-              <div className="card-lift overflow-hidden rounded-3xl border border-border bg-white shadow-sm">
-                <figure className="img-hover-zoom relative">
-                  <img
-                    src={spaImg}
-                    alt="Perro pequeño siendo peluqueado en el spa de la Clínica Maskotas Cali"
-                    loading="lazy"
-                    className="aspect-[16/10] w-full object-cover"
-                  />
-                </figure>
-                <div className="p-6">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-brand">
-                    Spa · Peluquería canina
-                  </div>
-                  <h3 className="mt-2 font-display text-2xl font-bold text-brand-dark">
-                    Transformaciones que enamoran
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Baño, corte y estética con productos hipoalergénicos. Un espacio pensado
-                    para que tu mascota se sienta segura y feliz.
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* WHY US */}
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
@@ -315,10 +233,15 @@ function Home() {
             <h2 className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl md:text-5xl">
               Una clínica pensada para la salud <span className="text-gradient-gold">real</span> de tu mascota
             </h2>
-            <p className="mt-5 text-base text-muted-foreground">
+            <EditableText
+              as="p"
+              id="whyus-para"
+              multiline
+              className="mt-5 block text-base text-muted-foreground"
+            >
               Combinamos diagnóstico avanzado, cirugía especializada y un trato cálido. Nada de
               consultas apresuradas: aquí escuchamos, explicamos y acompañamos.
-            </p>
+            </EditableText>
             <a
               href={waLink()}
               target="_blank"
@@ -328,6 +251,25 @@ function Home() {
               Hablemos por WhatsApp
               <ArrowRight className="h-4 w-4" />
             </a>
+
+            <div className="relative mt-10 hidden lg:block">
+              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-tr from-brand/20 via-transparent to-gold/20 blur-2xl" />
+              <EditableImage
+                id="whyus-img"
+                defaultSrc={whyImg}
+                alt="Veterinario revisando a un gato con cariño en la Clínica Maskotas Cali"
+                className="relative aspect-[4/3] w-full rounded-[2rem] border border-border object-cover shadow-xl"
+              />
+              <div className="absolute -bottom-5 -right-4 flex items-center gap-3 rounded-2xl border border-border bg-white/95 px-5 py-3 shadow-lg backdrop-blur">
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand text-white">
+                  <HeartPulse className="h-5 w-5" />
+                </div>
+                <div className="leading-tight">
+                  <div className="font-display text-lg font-bold text-brand-dark">Trato cercano</div>
+                  <div className="text-xs text-muted-foreground">Sin consultas apresuradas</div>
+                </div>
+              </div>
+            </div>
           </Reveal>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -337,8 +279,21 @@ function Home() {
                   <div className="grid h-11 w-11 place-items-center rounded-lg bg-gold/15 text-gold">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="mt-4 text-base font-semibold text-brand-dark">{title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                  <EditableText
+                    as="h3"
+                    id={`whyus-r${i}-title`}
+                    className="mt-4 block text-base font-semibold text-brand-dark"
+                  >
+                    {title}
+                  </EditableText>
+                  <EditableText
+                    as="p"
+                    id={`whyus-r${i}-desc`}
+                    multiline
+                    className="mt-2 block text-sm text-muted-foreground"
+                  >
+                    {desc}
+                  </EditableText>
                 </div>
               </Reveal>
             ))}

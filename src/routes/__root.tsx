@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -15,6 +16,9 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { WhatsAppFloat } from "../components/WhatsAppFloat";
 import { SITE } from "../lib/site";
+import { EditProvider } from "../lib/editing";
+import { PromoProvider } from "../lib/promos";
+import { EditBar } from "../components/EditBar";
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
@@ -181,18 +185,25 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAdmin = pathname.startsWith("/admin");
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <Footer />
-        <WhatsAppFloat />
-      </div>
+      <EditProvider>
+        <PromoProvider>
+          <div className="flex min-h-screen flex-col">
+            {!isAdmin && <Header />}
+            <main className="flex-1">
+              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+              <Outlet />
+            </main>
+            {!isAdmin && <Footer />}
+            {!isAdmin && <WhatsAppFloat />}
+          </div>
+          <EditBar />
+        </PromoProvider>
+      </EditProvider>
     </QueryClientProvider>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Clock, Phone, MessageCircle } from "lucide-react";
 import { SITE, waLink, telLink, formatPhone } from "@/lib/site";
+import logo from "@/assets/logo-maskotas.jpeg";
 
 export function Footer() {
   return (
@@ -11,15 +12,13 @@ export function Footer() {
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4 md:px-8">
         <div className="md:col-span-1">
           <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-gold">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
-                <ellipse cx="7" cy="8" rx="1.8" ry="2.4" />
-                <ellipse cx="12" cy="6" rx="1.8" ry="2.6" />
-                <ellipse cx="17" cy="8" rx="1.8" ry="2.4" />
-                <ellipse cx="4.5" cy="13" rx="1.5" ry="2" />
-                <path d="M12 12c-3.2 0-5.5 2.4-5.5 5 0 2.2 2 3 5.5 3s5.5-.8 5.5-3c0-2.6-2.3-5-5.5-5z" />
-              </svg>
-            </span>
+            <img
+              src={logo}
+              alt="Logo Clínica Veterinaria Maskotas"
+              width={44}
+              height={44}
+              className="h-11 w-11 rounded-full object-cover ring-2 ring-gold/60"
+            />
             <div className="leading-tight">
               <div className="font-display text-lg font-bold text-white">Maskotas</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/60">

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import slide1 from "@/assets/hero-slide-1.jpg";
-import slide2 from "@/assets/hero-slide-2.jpg";
-import slide3 from "@/assets/hero-slide-3.jpg";
+import slide1 from "@/assets/real-vet-dog.jpg";
+import slide2 from "@/assets/real-diagnostic.jpg";
+import slide3 from "@/assets/real-grooming.jpg";
 
 export type HeroSlide = {
   image: string;
@@ -15,7 +15,7 @@ export type HeroSlide = {
 export const HERO_SLIDES: HeroSlide[] = [
   {
     image: slide1,
-    alt: "Veterinaria examinando a un cachorro durante una consulta",
+    alt: "Médico veterinario examinando a un perro durante una consulta",
     kicker: "Atención médica",
     title: (
       <>
@@ -27,7 +27,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     image: slide2,
-    alt: "Quirófano veterinario con equipos de diagnóstico avanzado",
+    alt: "Especialista veterinario analizando imágenes de diagnóstico y radiografías",
     kicker: "Tecnología",
     title: (
       <>
@@ -39,7 +39,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
   {
     image: slide3,
-    alt: "Perro pequeño feliz siendo peluqueado en el spa",
+    alt: "Perro pequeño siendo peluqueado en el spa de mascotas",
     kicker: "Peluquería y spa",
     title: (
       <>
