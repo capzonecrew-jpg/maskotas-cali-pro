@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Stethoscope,
@@ -26,6 +26,7 @@ import { Reveal } from "@/components/Reveal";
 import { HeroCarousel, HERO_SLIDES } from "@/components/HeroCarousel";
 import { Promotions } from "@/components/Promotions";
 import { EditableText, EditableImage } from "@/lib/editing";
+import { PRODUCT_CATEGORIES } from "@/lib/catalog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -220,6 +221,47 @@ function Home() {
               </div>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      {/* PET SHOP TEASER */}
+      <section className="bg-secondary py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 md:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.3fr]">
+            <Reveal>
+              <div className="text-xs font-semibold uppercase tracking-widest text-brand">
+                Pet Shop
+              </div>
+              <h2 className="mt-3 font-display text-3xl font-bold text-brand-dark sm:text-4xl">
+                También somos tu <span className="text-gradient-gold">Pet Shop</span>
+              </h2>
+              <p className="mt-4 text-base text-muted-foreground">
+                Alimento premium, accesorios, higiene y farmacia veterinaria — con domicilio en Cali.
+              </p>
+              <Link
+                to="/pet-shop"
+                className="btn-gold mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
+              >
+                Ver el Pet Shop
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Reveal>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {PRODUCT_CATEGORIES.map(({ icon: Icon, label }, i) => (
+                <Reveal key={label} delay={(i % 4) * 80}>
+                  <Link
+                    to="/pet-shop"
+                    className="card-lift flex h-full flex-col items-center gap-3 rounded-2xl border border-border bg-white p-5 text-center"
+                  >
+                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand/10 text-brand">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <span className="text-sm font-semibold text-brand-dark">{label}</span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

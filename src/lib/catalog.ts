@@ -38,6 +38,7 @@ export type Service = {
   desc: string;
   price: string;
   image: string;
+  trust?: string; // micro-confianza (ej. "Laboratorio propio · Resultados el mismo día")
 };
 export type ServiceGroup = { label: string; services: Service[] };
 
@@ -45,7 +46,7 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   {
     label: "Medicina preventiva",
     services: [
-      { icon: Stethoscope, title: "Consulta general", desc: "Valoración clínica completa, diagnóstico y plan de tratamiento con médico veterinario.", price: "desde $45.000", image: imgVetDog },
+      { icon: Stethoscope, title: "Consulta general", desc: "Valoración clínica completa, diagnóstico y plan de tratamiento con médico veterinario.", price: "desde $45.000", image: imgVetDog, trust: "Médicos veterinarios titulados" },
       { icon: Syringe, title: "Vacunación", desc: "Esquemas para cachorros, adultos, gatos y refuerzo antirrábico anual.", price: "desde $35.000", image: imgVaccine },
       { icon: Bug, title: "Desparasitación", desc: "Control interno y externo de parásitos según peso y edad de tu mascota.", price: "desde $25.000", image: imgPharmacy },
       { icon: ScanLine, title: "Implante de microchip", desc: "Identificación permanente y registro para la seguridad de tu mascota.", price: "desde $70.000", image: imgDiagnostic },
@@ -54,10 +55,10 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
   {
     label: "Cirugía y diagnóstico",
     services: [
-      { icon: Scissors, title: "Esterilización", desc: "Ovariohisterectomía y orquiectomía con protocolo anestésico seguro.", price: "desde $180.000", image: imgSurgery },
-      { icon: HeartPulse, title: "Cirugías especializadas", desc: "Quirófano equipado y cirujano dedicado a casos complejos y de tejidos blandos.", price: "cotización", image: imgVetCat },
-      { icon: FlaskConical, title: "Laboratorio clínico", desc: "Hemograma, química sanguínea y perfiles con resultados en nuestro laboratorio propio.", price: "desde $60.000", image: imgLab },
-      { icon: Activity, title: "Ecografía e imágenes", desc: "Diagnóstico por imagen con equipos de última generación.", price: "desde $90.000", image: imgDiagnostic },
+      { icon: Scissors, title: "Esterilización", desc: "Ovariohisterectomía y orquiectomía con protocolo anestésico seguro.", price: "desde $180.000", image: imgSurgery, trust: "Protocolo anestésico seguro" },
+      { icon: HeartPulse, title: "Cirugías especializadas", desc: "Quirófano equipado y cirujano dedicado a casos complejos y de tejidos blandos.", price: "cotización", image: imgVetCat, trust: "Quirófano equipado" },
+      { icon: FlaskConical, title: "Laboratorio clínico", desc: "Hemograma, química sanguínea y perfiles con resultados en nuestro laboratorio propio.", price: "desde $60.000", image: imgLab, trust: "Laboratorio propio · Resultados el mismo día" },
+      { icon: Activity, title: "Ecografía e imágenes", desc: "Diagnóstico por imagen con equipos de última generación.", price: "desde $90.000", image: imgDiagnostic, trust: "Equipos de última generación" },
       { icon: Smile, title: "Odontología y profilaxis", desc: "Limpieza dental con ultrasonido, extracciones y cuidado bucal.", price: "desde $150.000", image: imgVetDog },
       { icon: Hospital, title: "Hospitalización", desc: "Internación con monitoreo, fluidoterapia y cuidado permanente por día.", price: "desde $90.000 / día", image: imgVetCat },
       { icon: HeartPulse, title: "Urgencias", desc: "Atención prioritaria en horario de atención. Prioridad en casos críticos.", price: "desde $70.000", image: imgVetCat },

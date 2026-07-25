@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle, Info, ArrowRight, Award, CheckCircle2, PawPrint, Plus, Trash2 } from "lucide-react";
+import { MessageCircle, Info, ShieldCheck, Award, CheckCircle2, PawPrint, Plus, Trash2 } from "lucide-react";
 import { waLink } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/PageHero";
@@ -107,10 +107,11 @@ function Servicios() {
                     desc: "Describe este servicio aquí.",
                     price: "desde $0",
                     image: "",
+                    trust: undefined as string | undefined,
                   })),
               ]
                 .filter((it) => !deleted.includes(it.id))
-                .map(({ icon: Icon, title, desc, price, image, id, isAdded }, i) => {
+                .map(({ icon: Icon, title, desc, price, image, id, isAdded, trust }, i) => {
                   const promo = getPromoFor(id);
                   return (
                     <Reveal key={id} delay={(i % 3) * 90}>
@@ -166,15 +167,21 @@ function Servicios() {
                           >
                             {desc}
                           </EditableText>
+                          {trust && (
+                            <div className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-gold/15 px-3 py-1 text-xs font-semibold text-brand">
+                              <ShieldCheck className="h-3.5 w-3.5" />
+                              {trust}
+                            </div>
+                          )}
                           {promo && <PromoNote promo={promo} />}
                           <a
                             href={waLink(`Hola, quiero información sobre: ${title}`)}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-gold"
+                            className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-brand-dark"
                           >
+                            <MessageCircle className="h-4 w-4" />
                             Consultar por WhatsApp
-                            <ArrowRight className="h-4 w-4" />
                           </a>
                         </div>
                       </div>
