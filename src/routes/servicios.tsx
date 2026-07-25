@@ -60,8 +60,27 @@ function Servicios() {
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+        {/* Navegación rápida por categorías */}
+        <Reveal>
+          <nav className="mb-12 flex flex-wrap justify-center gap-2">
+            {SERVICE_GROUPS.map((g, gi) => (
+              <a
+                key={g.label}
+                href={`#grupo-${gi}`}
+                className="rounded-full border border-border bg-white px-4 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-white"
+              >
+                {g.label}
+              </a>
+            ))}
+          </nav>
+        </Reveal>
+
         {SERVICE_GROUPS.map((group, gi) => (
-          <div key={group.label} className={gi > 0 ? "mt-16" : ""}>
+          <div
+            key={group.label}
+            id={`grupo-${gi}`}
+            className={`scroll-mt-24 ${gi > 0 ? "mt-16" : ""}`}
+          >
             <Reveal>
               <div className="flex items-center gap-4">
                 <EditableText
@@ -122,7 +141,7 @@ function Servicios() {
                               </div>
                             }
                           />
-                          <span className="absolute right-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-brand shadow-sm backdrop-blur">
+                          <span className="absolute right-3 top-3 rounded-full bg-gold px-3 py-1.5 text-sm font-bold text-brand-dark shadow-md">
                             <EditableText id={`${id}-price`}>{price}</EditableText>
                           </span>
                         </figure>
@@ -196,6 +215,9 @@ function Servicios() {
               <h3 className="mt-4 font-display text-2xl font-bold text-brand-dark sm:text-3xl">
                 Rinoplastia canina
               </h3>
+              <p className="mt-1 text-sm font-semibold text-gold">
+                Especialidad poco común en la región
+              </p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Un procedimiento que corrige las vías respiratorias en razas braquicéfalas (como
                 Bulldog Francés) para que respiren mejor y mejoren su calidad de vida. Es una cirugía
@@ -246,11 +268,11 @@ function Servicios() {
         <div className="relative mx-auto max-w-3xl px-4 text-center text-white md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl font-bold sm:text-4xl">
-              ¿No encuentras lo que buscas?
+              Cuéntanos el caso de tu mascota
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-white/85">
-              Cuéntanos qué necesita tu mascota y te asesoramos. Respondemos rápido, en horario de
-              atención.
+              Escríbenos por WhatsApp y te respondemos con el valor exacto y la orientación que
+              necesitas — rápido, en horario de atención.
             </p>
             <a
               href={waLink()}

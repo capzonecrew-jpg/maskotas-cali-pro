@@ -315,3 +315,23 @@
   animation: paw-float 9s linear infinite;
   pointer-events: none;
 }
+
+/* ---------- Impresión de la propuesta (PDF legible en blanco) ---------- */
+@media print {
+  .no-print { display: none !important; }
+  .proposal-root {
+    background: #ffffff !important;
+    color: #1a1526 !important;
+  }
+  .proposal-root * {
+    color: #1a1526 !important;
+    border-color: #e5e0ea !important;
+    box-shadow: none !important;
+  }
+  .proposal-root .bg-gold { background: #e8a81c !important; }
+  .proposal-root .text-gradient-gold {
+    -webkit-text-fill-color: #a77f1e !important;
+    color: #a77f1e !important;
+    background: none !important;
+  }
+}

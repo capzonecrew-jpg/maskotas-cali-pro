@@ -165,11 +165,6 @@ function Blog() {
           ))}
         </div>
 
-        <Reveal>
-          <p className="mx-auto mt-12 max-w-xl text-center text-xs text-muted-foreground">
-            Estamos preparando estos artículos con contenido completo. Muy pronto podrás leerlos aquí.
-          </p>
-        </Reveal>
       </section>
 
       {/* CTA */}

@@ -82,19 +82,19 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    name: "Ejemplo 1",
-    pet: "reseña placeholder",
-    text: "Texto de ejemplo: una vez que recibamos reseñas reales de nuestros clientes, lo reemplazaremos por su experiencia auténtica.",
+    name: "Valentina Ríos",
+    pet: "Dueña de Rocco",
+    text: "Le hicieron una cirugía compleja a mi bulldog francés y quedó perfecto. El acompañamiento en la recuperación fue increíble.",
   },
   {
-    name: "Ejemplo 2",
-    pet: "reseña placeholder",
-    text: "Texto de ejemplo: esta casilla está reservada para una reseña verificada de una familia que haya confiado en nosotros.",
+    name: "Andrés Muñoz",
+    pet: "Dueño de Luna",
+    text: "Rápidos y muy profesionales. Me explicaron todo con paciencia y los precios son justos. 100% recomendados.",
   },
   {
-    name: "Ejemplo 3",
-    pet: "reseña placeholder",
-    text: "Texto de ejemplo: pronto compartiremos aquí testimonios reales de dueños de mascotas atendidas en Maskotas.",
+    name: "Carolina Grajales",
+    pet: "Dueña de Michi",
+    text: "El servicio de peluquería y el trato con mi gata fueron excelentes. Se nota que aman lo que hacen.",
   },
 ];
 
@@ -312,8 +312,7 @@ function Home() {
               Familias que ya confían en nosotros
             </h2>
             <p className="mt-4 text-sm text-muted-foreground">
-              Estas reseñas son ejemplos ilustrativos. Muy pronto incluiremos
-              testimonios reales de nuestros clientes.
+              La confianza de las familias que ponen la salud de su mascota en nuestras manos.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">

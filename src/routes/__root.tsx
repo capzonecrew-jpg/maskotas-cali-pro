@@ -186,20 +186,20 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const isAdmin = pathname.startsWith("/admin");
+  const bare = pathname.startsWith("/admin") || pathname.startsWith("/propuesta");
 
   return (
     <QueryClientProvider client={queryClient}>
       <EditProvider>
         <PromoProvider>
           <div className="flex min-h-screen flex-col">
-            {!isAdmin && <Header />}
+            {!bare && <Header />}
             <main className="flex-1">
               {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
               <Outlet />
             </main>
-            {!isAdmin && <Footer />}
-            {!isAdmin && <WhatsAppFloat />}
+            {!bare && <Footer />}
+            {!bare && <WhatsAppFloat />}
           </div>
           <EditBar />
         </PromoProvider>

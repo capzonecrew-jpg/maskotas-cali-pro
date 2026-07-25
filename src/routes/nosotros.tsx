@@ -278,11 +278,13 @@ function Nosotros() {
               </button>
             )}
           </div>
-          <Reveal>
-            <p className="mx-auto mt-8 max-w-xl text-center text-xs text-muted-foreground">
-              Sube las fotos reales del equipo con el botón "Cambiar foto" en modo edición.
-            </p>
-          </Reveal>
+          {editing && (
+            <Reveal>
+              <p className="mx-auto mt-8 max-w-xl text-center text-xs text-muted-foreground">
+                Sube las fotos reales del equipo con el botón "Cambiar foto".
+              </p>
+            </Reveal>
+          )}
         </div>
       </section>
 

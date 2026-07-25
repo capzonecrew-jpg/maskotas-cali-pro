@@ -117,7 +117,14 @@ export function Footer() {
             >
               <Instagram className="h-4 w-4" />
             </a>
-            <span className="text-sm text-white/60">@{SITE.instagram}</span>
+            <a
+              href={SITE.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/60 transition-colors hover:text-gold"
+            >
+              @{SITE.instagram}
+            </a>
           </div>
         </div>
       </div>

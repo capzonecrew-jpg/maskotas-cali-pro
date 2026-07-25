@@ -60,6 +60,7 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
       { icon: Activity, title: "Ecografía e imágenes", desc: "Diagnóstico por imagen con equipos de última generación.", price: "desde $90.000", image: imgDiagnostic },
       { icon: Smile, title: "Odontología y profilaxis", desc: "Limpieza dental con ultrasonido, extracciones y cuidado bucal.", price: "desde $150.000", image: imgVetDog },
       { icon: Hospital, title: "Hospitalización", desc: "Internación con monitoreo, fluidoterapia y cuidado permanente por día.", price: "desde $90.000 / día", image: imgVetCat },
+      { icon: HeartPulse, title: "Urgencias", desc: "Atención prioritaria en horario de atención. Prioridad en casos críticos.", price: "desde $70.000", image: imgVetCat },
     ],
   },
   {
@@ -67,7 +68,6 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
     services: [
       { icon: Bath, title: "Baño y peluquería", desc: "Baño medicado, corte a máquina o tijera y estética con productos hipoalergénicos.", price: "desde $35.000", image: imgGrooming },
       { icon: Bone, title: "Spa completo", desc: "Baño, corte, limpieza de oídos, corte de uñas y deslanado.", price: "desde $60.000", image: imgBath },
-      { icon: HeartPulse, title: "Urgencias", desc: "Atención prioritaria en horario de atención cuando tu mascota más lo necesita.", price: "desde $70.000", image: imgVetCat },
       { icon: Truck, title: "Consulta a domicilio", desc: "Llevamos la atención veterinaria y el pet shop hasta tu hogar en Cali.", price: "desde $80.000", image: imgVetDog },
     ],
   },
