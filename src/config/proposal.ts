@@ -84,6 +84,7 @@ export const PROPOSAL = {
       recommended: false,
       features: [
         "Página profesional (una sola, con todas las secciones)",
+        "Panel privado para editar textos, precios y fotos tú mismo",
         "Botón de WhatsApp con mensaje listo",
         "Diseño elegante, perfecto en celular",
         "Mapa, horarios y enlace a Instagram",
