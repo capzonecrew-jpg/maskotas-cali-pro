@@ -141,7 +141,7 @@ export const PROPOSAL = {
       name: "Completa",
       tagline: "Una clínica digital: agenda con base de datos y tienda que cobra sola.",
       setup: 1800000,
-      monthly: 260000,
+      monthly: 200000,
       recommended: false,
       features: [
         "Todo lo del plan Profesional",
