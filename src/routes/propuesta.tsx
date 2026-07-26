@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Sparkles, ArrowRight, MessageCircle, Printer, ExternalLink } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Sparkles, ArrowRight, MessageCircle, Printer, ExternalLink, Tag } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { PROPOSAL } from "@/config/proposal";
 import logo from "@/assets/logo-maskotas.jpeg";
@@ -123,6 +123,15 @@ function Propuesta() {
             Conversemos por WhatsApp
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
+
+          <div className="no-print mt-5">
+            <Link
+              to="/precios"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-white"
+            >
+              <Tag className="h-4 w-4" /> Ver planes y precios
+            </Link>
+          </div>
 
           <div className="mt-8 border-t border-white/10 pt-6 text-sm text-white/60">
             <p className="text-white">{p.contact.name}</p>

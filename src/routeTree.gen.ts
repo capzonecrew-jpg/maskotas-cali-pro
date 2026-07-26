@@ -15,6 +15,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as PetShopRouteImport } from './routes/pet-shop'
+import { Route as PreciosRouteImport } from './routes/precios'
 import { Route as PropuestaRouteImport } from './routes/propuesta'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -49,6 +50,11 @@ const PetShopRoute = PetShopRouteImport.update({
   path: '/pet-shop',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PreciosRoute = PreciosRouteImport.update({
+  id: '/precios',
+  path: '/precios',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PropuestaRoute = PropuestaRouteImport.update({
   id: '/propuesta',
   path: '/propuesta',
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
   '/pet-shop': typeof PetShopRoute
+  '/precios': typeof PreciosRoute
   '/propuesta': typeof PropuestaRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -83,6 +90,7 @@ export interface FileRoutesByTo {
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
   '/pet-shop': typeof PetShopRoute
+  '/precios': typeof PreciosRoute
   '/propuesta': typeof PropuestaRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -95,6 +103,7 @@ export interface FileRoutesById {
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
   '/pet-shop': typeof PetShopRoute
+  '/precios': typeof PreciosRoute
   '/propuesta': typeof PropuestaRoute
   '/servicios': typeof ServiciosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -108,6 +117,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/nosotros'
     | '/pet-shop'
+    | '/precios'
     | '/propuesta'
     | '/servicios'
     | '/sitemap.xml'
@@ -119,6 +129,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/nosotros'
     | '/pet-shop'
+    | '/precios'
     | '/propuesta'
     | '/servicios'
     | '/sitemap.xml'
@@ -130,6 +141,7 @@ export interface FileRouteTypes {
     | '/contacto'
     | '/nosotros'
     | '/pet-shop'
+    | '/precios'
     | '/propuesta'
     | '/servicios'
     | '/sitemap.xml'
@@ -142,6 +154,7 @@ export interface RootRouteChildren {
   ContactoRoute: typeof ContactoRoute
   NosotrosRoute: typeof NosotrosRoute
   PetShopRoute: typeof PetShopRoute
+  PreciosRoute: typeof PreciosRoute
   PropuestaRoute: typeof PropuestaRoute
   ServiciosRoute: typeof ServiciosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -191,6 +204,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PetShopRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/precios': {
+      id: '/precios'
+      path: '/precios'
+      fullPath: '/precios'
+      preLoaderRoute: typeof PreciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/propuesta': {
       id: '/propuesta'
       path: '/propuesta'
@@ -222,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactoRoute: ContactoRoute,
   NosotrosRoute: NosotrosRoute,
   PetShopRoute: PetShopRoute,
+  PreciosRoute: PreciosRoute,
   PropuestaRoute: PropuestaRoute,
   ServiciosRoute: ServiciosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
