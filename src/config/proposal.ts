@@ -79,7 +79,7 @@ export const PROPOSAL = {
       id: "esencial",
       name: "Esencial",
       tagline: "Presencia profesional para que te encuentren y te escriban.",
-      setup: 690000,
+      setup: 600000,
       monthly: 90000,
       recommended: false,
       features: [
@@ -97,7 +97,7 @@ export const PROPOSAL = {
       id: "profesional",
       name: "Profesional",
       tagline: "Tu web completa, que tú mismo administras. La más pedida.",
-      setup: 1190000,
+      setup: 1000000,
       monthly: 160000,
       recommended: true,
       features: [
@@ -116,7 +116,7 @@ export const PROPOSAL = {
       id: "completa",
       name: "Completa",
       tagline: "Una clínica digital: agenda con base de datos y tienda que cobra sola.",
-      setup: 2400000,
+      setup: 2000000,
       monthly: 260000,
       recommended: false,
       features: [
