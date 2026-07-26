@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, ArrowLeft, MessageCircle, Printer, Star, Repeat } from "lucide-react";
+import { Check, ArrowLeft, MessageCircle, Printer, Star, Repeat, Info } from "lucide-react";
 import { PROPOSAL, type Plan } from "@/config/proposal";
 import logo from "@/assets/logo-maskotas.jpeg";
 import { SITE } from "@/lib/site";
@@ -120,9 +120,13 @@ function Precios() {
           ))}
         </section>
 
-        <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-white/50">
-          {p.priceNote}
-        </p>
+        <div className="mx-auto mt-8 flex max-w-3xl items-start gap-3 rounded-2xl border border-gold/50 bg-gold/10 p-5">
+          <Info className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
+          <p className="text-sm leading-relaxed text-white/90">
+            <span className="font-semibold text-gold">Importante: </span>
+            {p.priceNote}
+          </p>
+        </div>
 
         {/* ¿Para qué sirve la mensualidad? */}
         <section className="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
