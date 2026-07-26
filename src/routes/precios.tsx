@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, ArrowLeft, MessageCircle, Printer, Star } from "lucide-react";
+import { Check, ArrowLeft, MessageCircle, Printer, Star, Repeat } from "lucide-react";
 import { PROPOSAL, type Plan } from "@/config/proposal";
 import logo from "@/assets/logo-maskotas.jpeg";
 import { SITE } from "@/lib/site";
@@ -123,6 +123,29 @@ function Precios() {
         <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-relaxed text-white/50">
           {p.priceNote}
         </p>
+
+        {/* ¿Para qué sirve la mensualidad? */}
+        <section className="mt-14 rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+          <div className="flex items-center gap-2 text-gold">
+            <Repeat className="h-5 w-5" />
+            <span className="text-xs font-semibold uppercase tracking-[0.3em]">Mensualidad</span>
+          </div>
+          <h2 className="mt-3 font-display text-2xl font-bold md:text-3xl">{p.monthlyInfo.title}</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/70">
+            {p.monthlyInfo.intro}
+          </p>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {p.monthlyInfo.items.map((it, i) => (
+              <div key={i} className="rounded-2xl border border-white/10 bg-brand-dark/60 p-5">
+                <div className="flex items-center gap-2">
+                  <Check className="h-4 w-4 shrink-0 text-gold" />
+                  <span className="font-semibold text-white">{it.title}</span>
+                </div>
+                <p className="mt-1.5 text-sm leading-relaxed text-white/60">{it.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Cierre */}
         <section className="mt-16 rounded-3xl border border-gold bg-white/[0.03] p-8 text-center md:p-12">

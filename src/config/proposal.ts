@@ -72,6 +72,31 @@ export const PROPOSAL = {
       "Desde el plan Autogestionable, el posicionamiento SEO + GEO va INCLUIDO en la mensualidad TODOS LOS MESES, mientras el plan esté activo. No es un pago extra ni un servicio de una sola vez: cada mes seguimos mejorando su presencia en Google y en las IA, y le mostramos el avance en un reporte claro.",
   },
 
+  // ---- Explicación de la mensualidad (cuadro aparte) -----------------------
+  monthlyInfo: {
+    title: "¿Para qué sirve la mensualidad?",
+    intro:
+      "La instalación es un pago único para crear tu web. La mensualidad es lo que mantiene tu sitio vivo, seguro y subiendo en Google mes a mes. Sin ella, la web quedaría estática y perdería posicionamiento.",
+    items: [
+      {
+        title: "Siempre en línea y seguro",
+        text: "Copias de seguridad, actualizaciones y monitoreo para que tu web nunca se caiga ni se ponga lenta.",
+      },
+      {
+        title: "Soporte y cambios",
+        text: "Te acompaño ante cualquier duda o ajuste; si algo falla, lo arreglo.",
+      },
+      {
+        title: "SEO + GEO cada mes",
+        text: "Trabajo continuo para seguir apareciendo en Google y en los asistentes de IA. No es de una sola vez: es constante.",
+      },
+      {
+        title: "Reporte de avance",
+        text: "Cada mes te muestro cómo va tu posicionamiento y las visitas de tu web.",
+      },
+    ],
+  },
+
   // ---- Planes (EDITA precios y características) -----------------------------
   //  De más económico (Esencial) a más completo (Completa).
   plans: [
