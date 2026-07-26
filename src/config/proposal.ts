@@ -28,7 +28,7 @@ export const PROPOSAL = {
 
   // ---- Nota al pie de los precios ------------------------------------------
   priceNote:
-    "Precios en pesos colombianos (COP). El valor de instalación puede dividirse en 2 cuotas. La mensualidad incluye alojamiento, copias de seguridad, soporte y el posicionamiento SEO + GEO. No incluye presupuesto de publicidad (pauta), que se paga aparte directamente a la plataforma.",
+    "Precios en pesos colombianos (COP). En los planes Esencial y Profesional, el dominio y el hosting se pagan aparte (directamente a la plataforma, un costo bajo anual); en el plan Completa van incluidos. La mensualidad incluye soporte, copias de seguridad y el posicionamiento SEO + GEO. No incluye presupuesto de publicidad (pauta).",
 
   // ---- Argumentos de venta (por qué tener la web) --------------------------
   why: [
@@ -79,19 +79,17 @@ export const PROPOSAL = {
       id: "esencial",
       name: "Esencial",
       tagline: "Presencia profesional para que te encuentren y te escriban.",
-      setup: 700000,
+      setup: 800000,
       monthly: 90000,
       recommended: false,
       features: [
-        "Página profesional (una sola, con todas las secciones)",
+        "Página profesional con inicio, servicios, nosotros y contacto",
         "Panel privado para editar textos, precios y fotos tú mismo",
         "Botón de WhatsApp con mensaje listo",
         "Diseño elegante, perfecto en celular",
         "Mapa, horarios y enlace a Instagram",
         "Registro en Google Maps (Google Business)",
-        "Dominio propio (tunombre.com) + 1 correo",
         "SEO básico para aparecer en Google",
-        "Alojamiento, copias de seguridad y soporte",
       ],
     },
     {
@@ -122,9 +120,9 @@ export const PROPOSAL = {
       recommended: false,
       features: [
         "Todo lo del plan Profesional",
+        "Dominio, correo profesional y hosting incluidos",
         "Agenda de citas con base de datos y recordatorios",
         "Tienda del pet shop con pago en línea (tarjeta y PSE)",
-        "Historial de clientes y mascotas",
         "Configuración de envíos",
         "SEO + GEO avanzado y prioritario",
         "Reportes avanzados de visitas, citas y ventas",
