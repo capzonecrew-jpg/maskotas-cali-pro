@@ -149,7 +149,6 @@ export const PROPOSAL = {
         "Agenda de citas con base de datos y recordatorios",
         "Tienda del pet shop con pago en línea (tarjeta y PSE)",
         "Configuración de envíos",
-        "SEO + GEO avanzado y prioritario",
         "Reportes avanzados de visitas, citas y ventas",
       ],
     },
