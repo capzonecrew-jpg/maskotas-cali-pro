@@ -132,7 +132,6 @@ export const PROPOSAL = {
         "SEO + GEO (Google e IA) todos los meses (más que el SEO básico)",
         "Reporte mensual de posicionamiento",
         "Medición de visitas (Google Analytics)",
-        "Capacitación + manual en video",
       ],
     },
     {
