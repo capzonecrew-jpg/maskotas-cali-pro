@@ -23,8 +23,8 @@ const DATA = [
 const STATS = [
   { value: "53%", label: "de las visitas de una web llegan desde Google (cuánta gente llega)" },
   { value: "14.6%", label: "de los que te contactan por SEO terminan comprando — casi 9× más que la publicidad tradicional (qué tan bien convierte)" },
-  { value: "+700%", label: "creció el tráfico desde la IA en 2025" },
-  { value: "748%", label: "retorno promedio del SEO en 3 años" },
+  { value: "+700%", label: "creció el tráfico desde la IA en 2025 (×8): cada vez más gente le pregunta a ChatGPT o Gemini en vez de a Google" },
+  { value: "748%", label: "retorno del SEO en 3 años: por cada $1 invertido, se recuperan ~$7,5 en clientes y ventas" },
 ];
 
 const GOLD = "#E8A81C";
