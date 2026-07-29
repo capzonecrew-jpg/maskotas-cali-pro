@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, ArrowRight, MessageCircle, Printer, ExternalLink, Tag } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { PROPOSAL } from "@/config/proposal";
+import { GrowthChart } from "@/components/GrowthChart";
 import logo from "@/assets/logo-maskotas.jpeg";
 
 // WhatsApp hacia TU número (el de la propuesta), no el de la clínica.
@@ -103,6 +104,8 @@ function Propuesta() {
           <p className="mt-7 rounded-2xl border border-gold/60 bg-white/[0.04] px-5 py-4 text-sm leading-relaxed text-white/90">
             ✦ {p.seoGeo.closing}
           </p>
+
+          <GrowthChart />
         </section>
 
         {/* Cierre / contacto */}
