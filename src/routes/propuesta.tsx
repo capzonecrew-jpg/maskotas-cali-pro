@@ -121,7 +121,7 @@ function Propuesta() {
           <a
             href={waTo(
               p.contact.phone,
-              "Hola Samuel, me interesó la propuesta del sitio web para la clínica veterinaria.",
+              "Hola Samuel y Juan Sebastián, me interesó la propuesta del sitio web para la clínica veterinaria.",
             )}
             target="_blank"
             rel="noreferrer"

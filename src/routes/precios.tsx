@@ -62,7 +62,7 @@ function PlanCard({ plan }: { plan: Plan }) {
       <a
         href={waTo(
           PROPOSAL.contact.phone,
-          `Hola Samuel, me interesa el plan "${plan.name}" para la página web.`,
+          `Hola Samuel y Juan Sebastián, me interesa el plan "${plan.name}" para la página web.`,
         )}
         target="_blank"
         rel="noreferrer"
@@ -158,7 +158,7 @@ function Precios() {
             Escríbeme y te ayudo a elegir el plan según lo que necesitas. Sin compromiso.
           </p>
           <a
-            href={waTo(p.contact.phone, "Hola Samuel, quiero información sobre los planes y precios.")}
+            href={waTo(p.contact.phone, "Hola Samuel y Juan Sebastián, quiero información sobre los planes y precios.")}
             target="_blank"
             rel="noreferrer"
             className="btn-gold no-print mt-7 inline-flex items-center gap-2 rounded-full px-8 py-4 font-semibold"

@@ -164,7 +164,7 @@ export const PROPOSAL = {
 
   // ---- Contacto de quien presenta la propuesta (TÚ) ------------------------
   contact: {
-    name: "Samuel Barajas",
+    name: "Samuel Barajas y Juan Sebastián",
     phone: "+57 350 399 6448",
     email: "",
   },
