@@ -25,7 +25,7 @@ const PHASES = [
   {
     tag: "Mes 1 – 3",
     title: "Arranque",
-    text: "Aparecen en Google Maps y la web empieza a indexarse. Se sientan las bases del posicionamiento; aún llegan pocos clientes nuevos.",
+    text: "Aparecen en Google Maps y Google empieza a reconocer la web. Se sientan las bases del posicionamiento; aún llegan pocos clientes nuevos.",
   },
   {
     tag: "Mes 3 – 6",
