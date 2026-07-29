@@ -110,6 +110,7 @@ export const PROPOSAL = {
       features: [
         "Página profesional con inicio, servicios, nosotros y contacto",
         "Panel privado para editar textos, precios y fotos tú mismo",
+        "Promociones y descuentos con sello destacado",
         "Botón de WhatsApp con mensaje listo",
         "Diseño elegante, perfecto en celular",
         "Mapa, horarios y enlace a Instagram",
@@ -127,7 +128,6 @@ export const PROPOSAL = {
       features: [
         "Todo lo del plan Esencial",
         "Sitio completo (varias páginas): inicio, servicios, nosotros y contacto + Pet Shop y Blog",
-        "Promociones y descuentos con sello destacado",
         "Carrito del pet shop con pedido por WhatsApp",
         "SEO + GEO (Google e IA) todos los meses (más que el SEO básico)",
         "Reporte mensual de posicionamiento",
