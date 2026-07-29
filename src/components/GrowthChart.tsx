@@ -21,8 +21,8 @@ const DATA = [
 ];
 
 const STATS = [
-  { value: "53%", label: "del tráfico web viene de Google (búsqueda orgánica)" },
-  { value: "14.6%", label: "tasa de cierre de clientes que llegan por SEO (vs 1.7% tradicional)" },
+  { value: "53%", label: "de las visitas de una web llegan desde Google (cuánta gente llega)" },
+  { value: "14.6%", label: "de los que te contactan por SEO terminan comprando — casi 9× más que la publicidad tradicional (qué tan bien convierte)" },
   { value: "+700%", label: "creció el tráfico desde la IA en 2025" },
   { value: "748%", label: "retorno promedio del SEO en 3 años" },
 ];
