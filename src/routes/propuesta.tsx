@@ -3,6 +3,7 @@ import { Sparkles, ArrowRight, MessageCircle, Printer, ExternalLink, Tag } from 
 import { SITE } from "@/lib/site";
 import { PROPOSAL } from "@/config/proposal";
 import { GrowthChart } from "@/components/GrowthChart";
+import { ProjectionChart } from "@/components/ProjectionChart";
 import logo from "@/assets/logo-maskotas.jpeg";
 
 // WhatsApp hacia TU número (el de la propuesta), no el de la clínica.
@@ -107,6 +108,9 @@ function Propuesta() {
 
           <GrowthChart />
         </section>
+
+        {/* Proyección para la clínica */}
+        <ProjectionChart />
 
         {/* Cierre / contacto */}
         <section className="mt-20 rounded-3xl border border-gold bg-white/[0.03] p-8 text-center md:p-12">
