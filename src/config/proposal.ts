@@ -104,7 +104,7 @@ export const PROPOSAL = {
       id: "esencial",
       name: "Esencial",
       tagline: "Presencia profesional para que te encuentren y te escriban.",
-      setup: 800000,
+      setup: 600000,
       monthly: 90000,
       recommended: false,
       features: [
@@ -122,7 +122,7 @@ export const PROPOSAL = {
       id: "profesional",
       name: "Profesional",
       tagline: "Tu web completa, que tú mismo administras. La más pedida.",
-      setup: 1200000,
+      setup: 1000000,
       monthly: 160000,
       recommended: true,
       features: [
