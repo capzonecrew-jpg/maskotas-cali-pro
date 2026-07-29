@@ -126,7 +126,7 @@ export const PROPOSAL = {
       recommended: true,
       features: [
         "Todo lo del plan Esencial",
-        "Sitio completo con Pet Shop y Blog (varias páginas)",
+        "Sitio completo (varias páginas): inicio, servicios, nosotros y contacto + Pet Shop y Blog",
         "Promociones y descuentos con sello destacado",
         "Carrito del pet shop con pedido por WhatsApp",
         "SEO + GEO (Google e IA) todos los meses (más que el SEO básico)",
